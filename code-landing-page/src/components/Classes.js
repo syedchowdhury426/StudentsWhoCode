@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
-class Body extends Component {
+class Classes extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   render() {
-    return <div />;
+    return <div>Classes</div>;
   }
 }
 
-export default Body;
+export default Classes;

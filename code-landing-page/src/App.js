@@ -1,15 +1,19 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Body from "./components/Body";
+import Home from "./components/Home";
+import Classes from "./components/Classes";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header />
-      STUDENTS WHO CODE
-      <Body />
-    </div>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/classes" component={Classes} />
+      <Route exact path="/contact" component={Contact} />
+    </Router>
   );
 }
 

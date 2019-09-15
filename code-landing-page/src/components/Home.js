@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
-class Header extends Component {
+class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   render() {
-    return <div>Header</div>;
+    return <div>Home</div>;
   }
 }
 
-export default Header;
+export default Contact;
