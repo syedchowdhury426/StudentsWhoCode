@@ -7,6 +7,10 @@ import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 
+/*
+  Header is the top navigation bar
+  Used to display the key links on the site
+*/
 const Header = props => {
   const { classes } = props;
 
@@ -22,12 +26,18 @@ const Header = props => {
             Students Who Code
           </Button>
         </Typography>
+
+        {/* Button to go to the classes page */}
+
         <Button
           onClick={() => props.history.push("/classes")}
           className={classes.classes}
         >
           Classes
         </Button>
+
+        {/* Button to go to the contact page */}
+
         <Button
           onClick={() => props.history.push("/contact")}
           className={classes.contact}
@@ -39,6 +49,10 @@ const Header = props => {
   );
 };
 
+/*
+  this styles object is what we're using to design the component above
+  we're passing it as a prop to Header through the withStyles function 
+*/
 const styles = () => ({
   appBar: {
     flexGrow: 1,
