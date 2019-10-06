@@ -11,9 +11,7 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <Router>
-      {
-        //<Header />
-      }
+      <Header />
       <Route exact path="/" component={Home} />
       <Route exact path="/classes" component={Classes} />
       <Route exact path="/contact" component={Contact} />
