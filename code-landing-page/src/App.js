@@ -8,6 +8,9 @@ import Home from "./components/Home";
 import Classes from "./components/Classes";
 import Contact from "./components/Contact";
 
+/**
+ * Students Who Code Landing Page
+ */
 function App() {
   return (
     <Router>
