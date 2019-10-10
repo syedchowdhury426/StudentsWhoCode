@@ -11,6 +11,7 @@ import Contact from "./components/Contact";
 /**
  * Students Who Code Landing Page
  */
+
 function App() {
   return (
     <Router>
