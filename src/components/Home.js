@@ -12,6 +12,7 @@ class Home extends Component {
   }
 
   render() {
+    console.log(this.props.device + " " + document.body.clientWidth);
     return (
       <div style={imageContainer}>
         <img style={image} src={require("../resources/background.jpg")} />
