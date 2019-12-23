@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Classes from "./components/Classes";
 import Contact from "./components/Contact";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 
 /**
  * Students Who Code Landing Page
