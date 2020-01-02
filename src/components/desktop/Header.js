@@ -13,7 +13,12 @@ const Header = props => {
   return (
     <div style={headerContainerStyles}>
       <div style={logoContainerStyles}>
-        <img style={logoStyles} src={logo} alt="Students Who Code Logo" />
+        <img
+          style={logoStyles}
+          src={logo}
+          alt="Students Who Code Logo"
+          onClick={() => props.history.push("/")}
+        />
       </div>
       <div style={menuItemContainerStyles}>
         <div
@@ -22,6 +27,7 @@ const Header = props => {
               ? selectedContactMenuItemStyles
               : notSelectedMenuItemStyles
           }
+          onClick={() => props.history.push("/contact")}
         >
           <span
             style={
@@ -39,6 +45,7 @@ const Header = props => {
               ? selectedClassesMenuItemStyles
               : notSelectedMenuItemStyles
           }
+          onClick={() => props.history.push("/classes")}
         >
           <span
             style={
@@ -56,6 +63,7 @@ const Header = props => {
               ? selectedHomeMenuItemStyles
               : notSelectedMenuItemStyles
           }
+          onClick={() => props.history.push("/")}
         >
           <span style={menuItemTextStyles}>Home</span>
         </div>
@@ -74,7 +82,8 @@ const headerContainerStyles = {
 };
 
 const logoContainerStyles = {
-  marginLeft: "50%"
+  marginLeft: "50%",
+  cursor: "pointer"
 };
 
 const logoStyles = {
@@ -108,6 +117,7 @@ const selectedClassesMenuItemStyles = {
 };
 
 const selectedContactMenuItemStyles = {
+  cursor: "pointer",
   backgroundColor: "#9450C9",
   borderRadius: "10px",
   transform: "rotate(-45deg)",
@@ -116,7 +126,8 @@ const selectedContactMenuItemStyles = {
 };
 
 const notSelectedMenuItemStyles = {
-  transform: "rotate(-45deg)"
+  transform: "rotate(-45deg)",
+  cursor: "pointer"
 };
 
 const menuItemTextStyles = {
