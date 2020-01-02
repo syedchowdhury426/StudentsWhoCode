@@ -5,7 +5,9 @@ import MobileHome from "../components/mobile/Home";
 
 const Home = props => {
   return (
-    <div>{props.device === "desktop" ? <DesktopHome /> : <MobileHome />}</div>
+    <div style={{ height: "100%" }}>
+      {props.device === "desktop" ? <DesktopHome /> : <MobileHome />}
+    </div>
   );
 };
 

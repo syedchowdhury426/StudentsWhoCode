@@ -2,7 +2,7 @@ import React from "react";
 
 import Header from "../desktop/Header";
 
-import homePageBackgroundImage from "../../resources/desktop-background.jpg";
+import homePageBackgroundImage from "../../resources/desktop-background-2.jpg";
 
 const Home = props => {
   return (
@@ -14,9 +14,8 @@ const Home = props => {
 
 const homePageContainerStyles = {
   height: "100vh",
-  width: "100vw",
   backgroundImage: "url(" + homePageBackgroundImage + ")",
-  backgroundSize: "100%",
+  backgroundSize: "cover",
   backgroundRepeat: "no-repeat"
 };
 
