@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 
 import logo from "../../resources/logo.png";
+import hamburgerIcon from "../../resources/hamburger.png";
 
 const Header = props => {
   return (
@@ -14,6 +15,13 @@ const Header = props => {
           onClick={() => props.history.push("/")}
         />
       </div>
+      <div style={hamburgerIconContainerStyles}>
+        <img
+          style={hamburgerIconStyles}
+          src={hamburgerIcon}
+          alt="Hamburger menu to view available pages on site"
+        />
+      </div>
     </div>
   );
 };
@@ -22,6 +30,7 @@ const headerContainerStyles = {
   display: "flex",
   flexDirection: "row",
   flex: 1,
+  justifyContent: "space-between",
   width: "100vw",
   top: 0,
   position: "fixed"
@@ -32,7 +41,15 @@ const logoContainerStyles = {
 };
 
 const logoStyles = {
-  width: "50%"
+  width: "80px"
+};
+
+const hamburgerIconContainerStyles = {};
+
+const hamburgerIconStyles = {
+  width: "40px",
+  marginTop: "20px",
+  paddingRight: "10px"
 };
 
 export default withRouter(Header);
