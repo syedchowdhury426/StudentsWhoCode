@@ -82,7 +82,7 @@ const headerContainerStyles = {
 };
 
 const logoContainerStyles = {
-  marginLeft: "50%",
+  marginLeft: "47vw",
   cursor: "pointer"
 };
 
