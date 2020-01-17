@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Classes from "./components/Classes";
-import Contact from "./components/desktop/ContactUs";
+import Classes from "./pages/Classes";
+import Contact from "./pages/ContactUs";
 import Home from "./pages/Home";
 
 /**

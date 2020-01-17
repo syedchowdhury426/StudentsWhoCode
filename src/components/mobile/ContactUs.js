@@ -1,11 +1,11 @@
 import React from "react";
 
-import Header from "../mobile/Header";
+import Header from "./Header";
 
 import homePageBackgroundImage from "../../resources/mobile-background.jpg";
 
-const Home = props => {
-  console.log("home");
+const ContactUs = props => {
+  console.log("contact");
   return (
     <div style={homePageContainerStyles}>
       <Header />
@@ -20,4 +20,4 @@ const homePageContainerStyles = {
   backgroundRepeat: "no-repeat"
 };
 
-export default Home;
+export default ContactUs;

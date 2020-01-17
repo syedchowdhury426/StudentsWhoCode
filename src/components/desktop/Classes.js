@@ -1,14 +1,13 @@
 import React from "react";
 
-import Header from "../mobile/Header";
+import Header from "../desktop/Header";
 
-import homePageBackgroundImage from "../../resources/mobile-background.jpg";
+import homePageBackgroundImage from "../../resources/desktop-background-2.jpg";
 
-const Home = props => {
-  console.log("home");
+const Classes = props => {
   return (
     <div style={homePageContainerStyles}>
-      <Header />
+      <Header navBarSelection="classes" />
     </div>
   );
 };
@@ -20,4 +19,4 @@ const homePageContainerStyles = {
   backgroundRepeat: "no-repeat"
 };
 
-export default Home;
+export default Classes;
