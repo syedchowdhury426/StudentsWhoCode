@@ -1,6 +1,6 @@
 import React from "react";
 
-import DesktopContact from "../components/desktop/ContactUs";
+import DesktopContact from "../components/desktop/ContactUs2";
 import MobileContact from "../components/mobile/ContactUs";
 
 const ContactUs = props => {
