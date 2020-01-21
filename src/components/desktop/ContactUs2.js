@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component, Content } from 'react'
 import * as emailjs from 'emailjs-com'
 //import Layout from '../components/layout'
 import Header from "../desktop/Header";
 import homePageBackgroundImage from "../../resources/desktop-background-2.jpg";
-import { Button, FormFeedback, Form, FormGroup, Label, Input } from 'reactstrap'
+import { Button, Container, FormFeedback, Form, FormGroup, Label, Input } from 'reactstrap';
+//import { StyleSheet } from 'react-native';
+
+
 
 class ContactForm extends Component {
   state = {
@@ -56,8 +59,9 @@ class ContactForm extends Component {
         <div>
           {/*<Layout>*/}
           <h1 className="p-heading1">Get in Touch</h1>
-          <Form onSubmit={this.handleSubmit.bind(this)}>
 
+          <Container style={containerStyles}>
+          <Form onSubmit={this.handleSubmit.bind(this)}>
             <FormGroup controlId="formBasicEmail">
               <Label className="text-muted">Email address</Label>
               <Input
@@ -110,11 +114,18 @@ class ContactForm extends Component {
             </Button>
 
           </Form>
+          </Container>
           {/*</Layout>*/}
         </div>
       </div>
     )
   }
+}
+
+const containerStyles = {
+    alignItems: 'center',
+    flex: 1,
+    justifyContent: 'center'
 }
 
 const homePageContainerStyles = {
