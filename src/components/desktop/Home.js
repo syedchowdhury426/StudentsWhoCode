@@ -86,7 +86,7 @@ const homePageContainerStyles = {
   position: "relative",
   height: "100%",
   backgroundImage: "url(" + homePageBackgroundImage + ")",
-  backgroundSize: "100% 95%",
+  backgroundSize: "102% 102%",
   backgroundRepeat: "no-repeat",
   backgroundAttachment: "fixed"
 };
@@ -104,7 +104,7 @@ const introText = {
   textAlign: "center",
   fontFamily: "roboto",
   borderRadius: "30px",
-  backgroundColor: "#13C9EA",
+  backgroundColor: "#5ED1EC",
   color: "#033665",
   marginTop: "5vh",
   marginLeft: "27vw",
@@ -141,7 +141,7 @@ const whatAreWeHeaderStyle = {
 const whatAreWeBodyStyle = {
   fontFamily: "roboto",
   borderRadius: "20px",
-  backgroundColor: "#13C9EA",
+  backgroundColor: "#5ED1EC",
   color: "#033665",
   fontSize: "1.2vw",
   marginLeft: "5vw",
@@ -173,7 +173,7 @@ const whoAreWeHeaderStyle = {
 const whoAreWeBodyStyle = {
   fontFamily: "roboto",
   borderRadius: "20px",
-  backgroundColor: "#13C9EA",
+  backgroundColor: "#5ED1EC",
   color: "#033665",
   fontSize: "1.2vw",
   marginRight: "5vw",
