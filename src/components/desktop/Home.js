@@ -53,18 +53,18 @@ const Home = props => {
         <p style={whoAreWeHeaderStyle}>Who Are We?</p>
         <div style={whoAreWeBodyStyle}>
           <p>
-            Syed Chowdhury
+            <strong>Syed Chowdhury</strong>
             <br />
             Software Engineer and Product Manager at JPMorgan Chase
           </p>
           <p>
-            Idrees Ally
+            <strong>Idrees Ally</strong>
             <br />
             Assistant Professor with Rutgers Continuing Education Program at
             TrilogyEd Bootcamp
           </p>
           <p>
-            Tasfiqul Mollah
+            <strong>Tasfiqul Mollah</strong>
             <br />
             Business Management Student
           </p>
@@ -140,7 +140,7 @@ const whatAreWeHeaderStyle = {
 
 const whatAreWeBodyStyle = {
   fontFamily: "roboto",
-  borderRadius: "30px",
+  borderRadius: "20px",
   backgroundColor: "#13C9EA",
   color: "#033665",
   fontSize: "1.2vw",
@@ -148,7 +148,7 @@ const whatAreWeBodyStyle = {
   marginRight: "5vw",
   paddingTop: "10px",
   paddingBottom: "10px",
-  paddingLeft: "5px",
+  paddingLeft: "10px",
   paddingRight: "5px"
 };
 
@@ -172,7 +172,7 @@ const whoAreWeHeaderStyle = {
 
 const whoAreWeBodyStyle = {
   fontFamily: "roboto",
-  borderRadius: "30px",
+  borderRadius: "20px",
   backgroundColor: "#13C9EA",
   color: "#033665",
   fontSize: "1.2vw",
@@ -180,7 +180,7 @@ const whoAreWeBodyStyle = {
   paddingTop: "10px",
   paddingBottom: "10px",
   paddingLeft: "5px",
-  paddingRight: "5px"
+  paddingRight: "10px"
 };
 
 const socialMediaContainer = {
