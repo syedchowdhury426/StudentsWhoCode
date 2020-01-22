@@ -82,9 +82,9 @@ const Home = props => {
 
       <div style={socialMediaContainer}>
         <span>
-          <img style={iconStyle} src={facebookIcon} />
-          <img style={iconStyle} src={instragramIcon} />
-          <img style={iconStyle} src={linkedinIcon} />
+          <img style={leftsocialIconStyle} src={linkedinIcon} />
+          <img style={socialIconStyle} src={instragramIcon} />
+          <img style={rightsocialIconStyle} src={facebookIcon} />
         </span>
       </div>
     </div>
@@ -187,7 +187,17 @@ const socialMediaContainer = {
   height: "5vh"
 };
 
-const iconStyle = {
+const socialIconStyle = {
+  width: "5vh",
+  marginLeft: "10px",
+  marginRight: "10px"
+};
+
+const leftsocialIconStyle = {
+  width: "5vh"
+};
+
+const rightsocialIconStyle = {
   width: "5vh"
 };
 

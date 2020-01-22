@@ -97,9 +97,9 @@ const Classes = props => {
 
       <div style={socialMediaContainer}>
         <span>
-          <img style={socialIconStyle} src={facebookIcon} />
+          <img style={leftsocialIconStyle} src={linkedinIcon} />
           <img style={socialIconStyle} src={instragramIcon} />
-          <img style={socialIconStyle} src={linkedinIcon} />
+          <img style={rightsocialIconStyle} src={facebookIcon} />
         </span>
       </div>
     </div>
@@ -185,6 +185,16 @@ const socialMediaContainer = {
 };
 
 const socialIconStyle = {
+  width: "5vh",
+  marginLeft: "10px",
+  marginRight: "10px"
+};
+
+const leftsocialIconStyle = {
+  width: "5vh"
+};
+
+const rightsocialIconStyle = {
   width: "5vh"
 };
 
