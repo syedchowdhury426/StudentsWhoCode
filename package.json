@@ -16,8 +16,7 @@
     "react-protected-mailto": "^1.0.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.3.0",
-    "reactstrap": "^8.2.0",
-    "typeface-roboto": "0.0.75"
+    "reactstrap": "^8.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

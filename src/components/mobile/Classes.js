@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Header from "../mobile/Header";
 
@@ -11,101 +11,128 @@ import facebookIcon from "../../resources/facebook.png";
 import instragramIcon from "../../resources/instagram.png";
 import linkedinIcon from "../../resources/linkedin.png";
 
-const Classes = props => {
-  console.log("classes");
-  return (
-    <div style={homePageContainerStyles}>
-      <Header />
+class Classes extends Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return (
+      <div style={homePageContainerStyles}>
+        <Header />
 
-      <p style={mainHeaderText}>Elementary</p>
+        <p style={mainHeaderText}>Elementary</p>
 
-      <div style={iconContainer}>
-        <img style={iconStyle} src={scratchIcon} />
+        <div style={iconContainer}>
+          <img style={iconStyle} src={scratchIcon} />
+        </div>
+
+        <p style={bodyStyle}>
+          Our elementary program will be based around <strong>MIT’s</strong>{" "}
+          open-source <strong>Scratch</strong> Software.
+          <br />
+          MIT developed this program as a simplified entry point into
+          programming for <strong>young students</strong>.<br />
+          It uses a drag and drop feature while maintaining all of the{" "}
+          <strong>logic</strong> and fundamentals behind a real coding language.
+          <br />
+          Google took note of Scratch and created its own set of accessible
+          lesson plans on their highly acclaimed <strong>CS First</strong>{" "}
+          platform.
+          <br />
+          CS First allows us to track the <strong>metrics</strong> of students’{" "}
+          <strong>performance</strong>.
+        </p>
+
+        <div style={scrollDownContainer}>
+          <a
+            onClick={() =>
+              window.scrollTo(0, this.intermediateElement.offsetTop + 140)
+            }
+          >
+            <img src={scrollDownImage} />
+          </a>
+        </div>
+
+        <p
+          id="intermediate"
+          style={otherHeadersText}
+          ref={intermediateElement => {
+            this.intermediateElement = intermediateElement;
+          }}
+        >
+          Intermediate
+        </p>
+
+        <div style={iconContainer}>
+          <img style={webIconStyle} src={webIcon} />
+        </div>
+
+        <p style={bodyStyle}>
+          Our intermediate program starts off with <strong>Scratch</strong> for
+          the early middle school students.
+          <br />
+          Scratch will be used to introduce students to the fundamentals of{" "}
+          <strong>programming</strong>.<br />
+          Younger students, who have completed this Scratch portion, and older
+          students will be able to join the <strong>
+            Web Development
+          </strong>{" "}
+          class.
+          <br />
+          This class will teach the basics of web development, using{" "}
+          <strong>HTML & CSS</strong>, and students will be able to create their
+          own <strong>web pages</strong>.
+        </p>
+
+        <div style={scrollDownContainer}>
+          <a
+            onClick={() =>
+              window.scrollTo(0, this.advancedElement.offsetTop + 180)
+            }
+          >
+            <img src={scrollDownImage} />
+          </a>
+        </div>
+
+        <p
+          id="advanced"
+          style={otherHeadersText}
+          ref={advancedElement => {
+            this.advancedElement = advancedElement;
+          }}
+        >
+          Advanced
+        </p>
+
+        <div style={iconContainer}>
+          <img style={webIconStyle} src={advancedIcon} />
+        </div>
+
+        <p style={bodyStyle}>
+          Our advanced program will target the older students, 13 and up. There
+          will be <strong>two</strong> classes in this program.
+          <br />
+          Students will have the option of learning{" "}
+          <strong>Web Development</strong>, with{" "}
+          <strong>HTML, CSS, and JavaScript</strong>, or{" "}
+          <strong>Object-Oriented programming</strong>
+          with the most popular programming language to date,{" "}
+          <strong>Java</strong>.{" "}
+        </p>
+
+        <div style={emptyContainer}>.</div>
+
+        <div style={socialMediaContainer}>
+          <span>
+            <img style={leftsocialIconStyle} src={linkedinIcon} />
+            <img style={socialIconStyle} src={instragramIcon} />
+            <img style={rightsocialIconStyle} src={facebookIcon} />
+          </span>
+        </div>
       </div>
-
-      <p style={bodyStyle}>
-        Our elementary program will be based around <strong>MIT’s</strong>{" "}
-        open-source <strong>Scratch</strong> Software.
-        <br />
-        MIT developed this program as a simplified entry point into programming
-        for <strong>young students</strong>.<br />
-        It uses a drag and drop feature while maintaining all of the{" "}
-        <strong>logic</strong> and fundamentals behind a real coding language.
-        <br />
-        Google took note of Scratch and created its own set of accessible lesson
-        plans on their highly acclaimed <strong>CS First</strong> platform.
-        <br />
-        CS First allows us to track the <strong>metrics</strong> of students’{" "}
-        <strong>performance</strong>.
-      </p>
-
-      <div style={scrollDownContainer}>
-        <a href="#intermediate">
-          <img src={scrollDownImage} />
-        </a>
-      </div>
-
-      <p id="intermediate" style={otherHeadersText}>
-        Intermediate
-      </p>
-
-      <div style={iconContainer}>
-        <img style={webIconStyle} src={webIcon} />
-      </div>
-
-      <p style={bodyStyle}>
-        Our intermediate program starts off with <strong>Scratch</strong> for
-        the early middle school students.
-        <br />
-        Scratch will be used to introduce students to the fundamentals of{" "}
-        <strong>programming</strong>.<br />
-        Younger students, who have completed this Scratch portion, and older
-        students will be able to join the <strong>Web Development</strong>{" "}
-        class.
-        <br />
-        This class will teach the basics of web development, using{" "}
-        <strong>HTML & CSS</strong>, and students will be able to create their
-        own <strong>web pages</strong>.
-      </p>
-
-      <div style={scrollDownContainer}>
-        <a href="#advanced">
-          <img src={scrollDownImage} />
-        </a>
-      </div>
-
-      <p id="advanced" style={otherHeadersText}>
-        Advanced
-      </p>
-
-      <div style={iconContainer}>
-        <img style={webIconStyle} src={advancedIcon} />
-      </div>
-
-      <p style={bodyStyle}>
-        Our advanced program will target the older students, 13 and up. There
-        will be <strong>two</strong> classes in this program.
-        <br />
-        Students will have the option of learning{" "}
-        <strong>Web Development</strong>, with{" "}
-        <strong>HTML, CSS, and JavaScript</strong>, or{" "}
-        <strong>Object-Oriented programming</strong>
-        with the most popular programming language to date,{" "}
-        <strong>Java</strong>.{" "}
-      </p>
-
-      <div style={emptyContainer}>.</div>
-
-      <div style={socialMediaContainer}>
-        <span>
-          <img style={leftsocialIconStyle} src={linkedinIcon} />
-          <img style={socialIconStyle} src={instragramIcon} />
-          <img style={rightsocialIconStyle} src={facebookIcon} />
-        </span>
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 const homePageContainerStyles = {
   backgroundImage: "url(" + homePageBackgroundImage + ")",
@@ -120,8 +147,8 @@ const mainHeaderText = {
   textAlign: "center",
   color: "white",
   fontWeight: "bold",
-  fontFamily: "futura",
-  fontSize: "5vh",
+  fontFamily: "Palanquin Dark, sans-serif",
+  fontSize: "5.5vh",
   paddingTop: "28vh"
 };
 
@@ -129,8 +156,8 @@ const otherHeadersText = {
   textAlign: "center",
   color: "white",
   fontWeight: "bold",
-  fontFamily: "futura",
-  fontSize: "5vh",
+  fontFamily: "Palanquin Dark, sans-serif",
+  fontSize: "5.5vh",
   paddingTop: "40vh"
 };
 

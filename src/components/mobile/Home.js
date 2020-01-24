@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Header from "../mobile/Header";
 
@@ -8,88 +8,113 @@ import facebookIcon from "../../resources/facebook.png";
 import instragramIcon from "../../resources/instagram.png";
 import linkedinIcon from "../../resources/linkedin.png";
 
-const Home = props => {
-  console.log("home");
-  return (
-    <div style={homePageContainerStyles}>
-      <Header />
+class Home extends Component {
+  constructor() {
+    super();
+  }
 
-      <p style={title}>STUDENTS WHO CODE</p>
-      <p style={introText}>
-        We are an <strong>after school program</strong> committed to inspring a{" "}
-        <strong>passion for coding</strong> in students from an{" "}
-        <strong>early age</strong>
-      </p>
+  render() {
+    return (
+      <div style={homePageContainerStyles}>
+        <Header />
 
-      <div style={scrollDownContainer}>
-        <a href="#whatAreWe">
-          <img src={scrollDownImage} />
-        </a>
+        <p style={title}>STUDENTS WHO CODE</p>
+        <p style={introText}>
+          We are an <strong>after school program</strong> committed to inspring
+          a <strong>passion for coding</strong> in students from an{" "}
+          <strong>early age</strong>
+        </p>
+
+        <div style={scrollDownContainer}>
+          <a
+            onClick={() =>
+              window.scrollTo(0, this.whatAreWeElement.offsetTop - 100)
+            }
+          >
+            <img src={scrollDownImage} />
+          </a>
+        </div>
+
+        <p
+          id="whatAreWe"
+          style={whatAreWeHeaderStyle}
+          ref={whatAreWeElement => {
+            this.whatAreWeElement = whatAreWeElement;
+          }}
+        >
+          What Are We?
+        </p>
+        <div style={whatAreWeBodyStyle}>
+          <p>
+            We are an <strong>afterschool</strong> program with the goal of
+            introducing students to <strong>coding</strong>. Something that they
+            usually would not experience until their <strong>college</strong>{" "}
+            years
+          </p>
+          <p>
+            We work with <strong>educational institutions,</strong>
+            <br /> and also <strong>local communities</strong> to bring this
+            program to their youth
+          </p>
+          <p>
+            StudentsWhoCode is intended for three age demographics:
+            <br /> <strong>elementary</strong>, <strong>middle</strong>, and{" "}
+            <strong>high</strong> school
+          </p>
+        </div>
+
+        <div style={scrollDownContainer}>
+          <a
+            onClick={() =>
+              window.scrollTo(0, this.whoAreWeElement.offsetTop - 100)
+            }
+          >
+            <img src={scrollDownImage} />
+          </a>
+        </div>
+
+        <p
+          id="whoAreWe"
+          style={whoAreWeHeaderStyle}
+          ref={whoAreWeElement => {
+            this.whoAreWeElement = whoAreWeElement;
+          }}
+        >
+          Who Are We?
+        </p>
+
+        <div style={whoAreWeBodyStyle}>
+          <p>
+            <strong>Syed Chowdhury</strong>
+            <br />
+            Software Engineer and Product Manager at JPMorgan Chase
+          </p>
+          <p>
+            <strong>Idrees Ally</strong>
+            <br />
+            Assistant Professor with Rutgers Continuing Education Program at
+            TrilogyEd Bootcamp
+          </p>
+          <p>
+            <strong>Tasfiqul Mollah</strong>
+            <br />
+            Business Management Student
+          </p>
+        </div>
+
+        <p>.</p>
+
+        <div style={socialMediaContainer}>
+          <span>
+            <img style={leftsocialIconStyle} src={linkedinIcon} />
+            <img style={socialIconStyle} src={instragramIcon} />
+            <img style={rightsocialIconStyle} src={facebookIcon} />
+          </span>
+        </div>
       </div>
-
-      <p id="whatAreWe" style={whatAreWeHeaderStyle}>
-        What Are We?
-      </p>
-      <div style={whatAreWeBodyStyle}>
-        <p>
-          We are an <strong>afterschool</strong> program with the goal of
-          introducing students to <strong>coding</strong>. Something that they
-          usually would not experience until their <strong>college</strong>{" "}
-          years
-        </p>
-        <p>
-          We work with <strong>educational institutions,</strong>
-          <br /> and also <strong>local communities</strong> to bring this
-          program to their youth
-        </p>
-        <p>
-          StudentsWhoCode is intended for three age demographics:
-          <br /> <strong>elementary</strong>, <strong>middle</strong>, and{" "}
-          <strong>high</strong> school
-        </p>
-      </div>
-
-      <div style={scrollDownContainer}>
-        <a href="#whoAreWe">
-          <img src={scrollDownImage} />
-        </a>
-      </div>
-
-      <p id="whoAreWe" style={whoAreWeHeaderStyle}>
-        Who Are We?
-      </p>
-
-      <div style={whoAreWeBodyStyle}>
-        <p>
-          <strong>Syed Chowdhury</strong>
-          <br />
-          Software Engineer and Product Manager at JPMorgan Chase
-        </p>
-        <p>
-          <strong>Idrees Ally</strong>
-          <br />
-          Assistant Professor with Rutgers Continuing Education Program at
-          TrilogyEd Bootcamp
-        </p>
-        <p>
-          <strong>Tasfiqul Mollah</strong>
-          <br />
-          Business Management Student
-        </p>
-      </div>
-
-      <p>.</p>
-
-      <div style={socialMediaContainer}>
-        <span>
-          <img style={leftsocialIconStyle} src={linkedinIcon} />
-          <img style={socialIconStyle} src={instragramIcon} />
-          <img style={rightsocialIconStyle} src={facebookIcon} />
-        </span>
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 const homePageContainerStyles = {
   backgroundImage: "url(" + homePageBackgroundImage + ")",
@@ -105,7 +130,7 @@ const title = {
   textAlign: "center",
   color: "white",
   fontWeight: "bold",
-  fontFamily: "futura",
+  fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3.5vh"
 };
 
@@ -122,7 +147,7 @@ const introText = {
   paddingBottom: "10px",
   paddingLeft: "5px",
   paddingRight: "5px",
-  fontSize: "2vh"
+  fontSize: "2.2vh"
 };
 
 const scrollDownContainer = {
@@ -134,7 +159,7 @@ const whatAreWeHeaderStyle = {
   marginTop: "40vh",
   color: "white",
   fontWeight: "bold",
-  fontFamily: "futura",
+  fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3vh",
   textAlign: "center"
 };
@@ -157,7 +182,7 @@ const whoAreWeHeaderStyle = {
   marginTop: "40vh",
   color: "white",
   fontWeight: "bold",
-  fontFamily: "futura",
+  fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3vh",
   textAlign: "center"
 };
