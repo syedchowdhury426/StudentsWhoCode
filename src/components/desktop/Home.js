@@ -123,7 +123,8 @@ const homePageContainerStyles = {
   backgroundImage: "url(" + homePageBackgroundImage + ")",
   backgroundSize: "102% 102%",
   backgroundRepeat: "no-repeat",
-  backgroundAttachment: "fixed"
+  backgroundAttachment: "fixed",
+  flex: 1
 };
 
 const title = {
