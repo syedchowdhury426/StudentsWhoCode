@@ -35,7 +35,7 @@ class Home extends Component {
         <div style={scrollDownContainer}>
           <a
             onClick={() =>
-              window.scrollTo(0, this.whatAreWeElement.offsetTop - 150)
+              window.scrollTo(0, this.whatAreWeElement.offsetTop - 225)
             }
           >
             <img src={scrollDownImage} />
@@ -178,7 +178,7 @@ const whatAreWeBodyStyle = {
   borderRadius: "20px",
   backgroundColor: "#5ED1EC",
   color: "#033665",
-  fontSize: "1.4vw",
+  fontSize: "1.3vw",
   marginLeft: "5vw",
   marginRight: "5vw",
   paddingTop: "10px",
@@ -210,7 +210,7 @@ const whoAreWeBodyStyle = {
   borderRadius: "20px",
   backgroundColor: "#5ED1EC",
   color: "#033665",
-  fontSize: "1.4vw",
+  fontSize: "1.3vw",
   marginRight: "5vw",
   paddingTop: "10px",
   paddingBottom: "10px",

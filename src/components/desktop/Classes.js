@@ -182,7 +182,7 @@ const bodyStyle = {
   borderRadius: "20px",
   backgroundColor: "#5ED1EC",
   color: "#033665",
-  fontSize: "1.4vw",
+  fontSize: "1.3vw",
   marginLeft: "20vw",
   marginRight: "20vw",
   paddingTop: "10px",
