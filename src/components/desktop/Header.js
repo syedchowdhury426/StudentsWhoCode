@@ -15,7 +15,7 @@ class Header extends Component {
     super(props);
     this.state = {
       backgroundImageUsed:
-        this.props.navBarSelection === "classes"
+        props.navBarSelection === "classes"
           ? homePageBackgroundImage
           : homePageBackgroundImage2
     };

@@ -6,15 +6,65 @@ import hamburgerIcon from "../../resources/hamburger.png";
 
 import Modal from "react-bootstrap/Modal";
 
+import homePageBackgroundImage from "../../resources/desktop-background.jpg";
+import homePageBackgroundImage2 from "../../resources/desktop-background-2.jpg";
+
 class Header extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      backgroundImageUsed:
+        props.navBarSelection === "classes"
+          ? homePageBackgroundImage
+          : homePageBackgroundImage2
     };
   }
 
   render() {
+    const styles = {
+      headerContainerStyles: {
+        display: "flex",
+        flexDirection: "row",
+        flex: 1,
+        justifyContent: "space-between",
+        width: "100vw",
+        top: 0,
+        position: "fixed",
+
+        backgroundImage: "url(" + this.state.backgroundImageUsed + ")",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed"
+      },
+      logoContainerStyles: {
+        cursor: "pointer"
+      },
+      logoStyles: {
+        width: "80px"
+      },
+      hamburgerIconStyles: {
+        width: "40px",
+        marginTop: "20px",
+        paddingRight: "10px"
+      },
+      modalLinkStyles: {
+        padding: "5px",
+        margin: "5px",
+        border: "2px solid black",
+        borderRadius: "50px",
+        textAlign: "center"
+      }
+    };
+
+    const {
+      headerContainerStyles,
+      logoContainerStyles,
+      logoStyles,
+      hamburgerIconStyles,
+      modalLinkStyles
+    } = styles;
     return (
       <div style={headerContainerStyles}>
         <div style={logoContainerStyles}>
@@ -66,37 +116,5 @@ class Header extends Component {
     );
   }
 }
-
-const headerContainerStyles = {
-  display: "flex",
-  flexDirection: "row",
-  flex: 1,
-  justifyContent: "space-between",
-  width: "100vw",
-  top: 0,
-  position: "fixed"
-};
-
-const logoContainerStyles = {
-  cursor: "pointer"
-};
-
-const logoStyles = {
-  width: "80px"
-};
-
-const hamburgerIconStyles = {
-  width: "40px",
-  marginTop: "20px",
-  paddingRight: "10px"
-};
-
-const modalLinkStyles = {
-  padding: "5px",
-  margin: "5px",
-  border: "2px solid black",
-  borderRadius: "50px",
-  textAlign: "center"
-};
 
 export default withRouter(Header);

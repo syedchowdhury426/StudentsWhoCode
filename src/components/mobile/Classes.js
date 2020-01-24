@@ -18,7 +18,7 @@ class Classes extends Component {
   render() {
     return (
       <div style={homePageContainerStyles}>
-        <Header />
+        <Header navBarSelection="classes" />
 
         <p style={mainHeaderText}>Elementary</p>
 

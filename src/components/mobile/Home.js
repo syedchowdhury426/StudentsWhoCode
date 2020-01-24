@@ -16,7 +16,7 @@ class Home extends Component {
   render() {
     return (
       <div style={homePageContainerStyles}>
-        <Header />
+        <Header navBarSelection="home" />
 
         <p style={title}>STUDENTS WHO CODE</p>
         <p style={introText}>
