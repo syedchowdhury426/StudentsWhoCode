@@ -139,7 +139,8 @@ const homePageContainerStyles = {
   backgroundRepeat: "no-repeat",
   position: "relative",
   height: "100%",
-  backgroundAttachment: "fixed"
+  backgroundAttachment: "fixed",
+  overflow: "hidden"
 };
 
 const mainHeaderText = {
