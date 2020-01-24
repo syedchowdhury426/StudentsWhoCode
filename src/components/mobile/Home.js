@@ -122,7 +122,8 @@ const homePageContainerStyles = {
   backgroundRepeat: "no-repeat",
   position: "relative",
   height: "100%",
-  backgroundAttachment: "fixed"
+  backgroundAttachment: "fixed",
+  flex: 1
 };
 
 const title = {
