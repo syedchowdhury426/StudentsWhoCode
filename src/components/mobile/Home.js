@@ -117,13 +117,20 @@ class Home extends Component {
 }
 
 const homePageContainerStyles = {
-  backgroundImage: "url(" + homePageBackgroundImage + ")",
+  content: "",
+  display: "block",
+  position: "fixed",
+  left: 0,
+  top: 0,
+  width: "100%",
+  height: "100",
+  zIndex: -10,
+  background: "url(" + homePageBackgroundImage + ") no-repeat center center",
+  webkitBackgroundSize: "cover",
+  mozBackgroundSize: "cover",
+  oBackgroundSize: "cover",
   backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  position: "relative",
-  height: "100%",
-  backgroundAttachment: "fixed",
-  flex: 1
+  backgroundAttachment: "scroll"
 };
 
 const title = {
