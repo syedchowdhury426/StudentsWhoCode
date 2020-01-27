@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import Header from "../desktop/Header";
 
-import homePageBackgroundImage from "../../resources/desktop-background-2.jpg";
 import scrollDownImage from "../../resources/scrollDown.png";
 import facebookIcon from "../../resources/facebook.png";
 import instragramIcon from "../../resources/instagram.png";
@@ -34,9 +33,10 @@ class Home extends Component {
 
         <div style={scrollDownContainer}>
           <a
-            onClick={() =>
-              window.scrollTo(0, this.whatAreWeElement.offsetTop - 225)
-            }
+            onClick={() => {
+              document.getElementById("whatAreWe").scrollIntoView();
+              document.getElementById("home").scrollTop -= 200;
+            }}
           >
             <img src={scrollDownImage} />
           </a>
@@ -70,9 +70,10 @@ class Home extends Component {
         </div>
         <div style={scrollDownContainer}>
           <a
-            onClick={() =>
-              window.scrollTo(0, this.whoAreWeElement.offsetTop - 150)
-            }
+            onClick={() => {
+              document.getElementById("whoAreWe").scrollIntoView();
+              document.getElementById("home").scrollTop -= 100;
+            }}
           >
             <img src={scrollDownImage} />
           </a>

@@ -6,7 +6,7 @@ import hamburgerIcon from "../../resources/hamburger.png";
 
 import Modal from "react-bootstrap/Modal";
 
-import homePageBackgroundImage from "../../resources/desktop-background.jpg";
+import homePageBackgroundImage from "../../resources/mobile-background-2.png";
 import homePageBackgroundImage2 from "../../resources/mobile-background.jpg";
 
 class Header extends Component {
@@ -33,10 +33,9 @@ class Header extends Component {
         position: "fixed",
 
         backgroundImage: "url(" + this.state.backgroundImageUsed + ")",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed"
+        backgroundSize: "100vw 95vh",
+        backgroundPosition: "left top",
+        backgroundRepeat: "no-repeat"
       },
       logoContainerStyles: {
         cursor: "pointer"

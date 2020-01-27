@@ -34,8 +34,7 @@ class Header extends Component {
 
         backgroundImage: "url(" + this.state.backgroundImageUsed + ")",
         backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed"
+        backgroundRepeat: "no-repeat"
       },
       logoContainerStyles: {
         marginLeft: "47vw",

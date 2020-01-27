@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import Header from "../mobile/Header";
 
-import homePageBackgroundImage from "../../resources/mobile-background-2.png";
 import scratchIcon from "../../resources/scratch.png";
 import webIcon from "../../resources/web.png";
 import advancedIcon from "../../resources/advanced.png";
@@ -17,7 +16,7 @@ class Classes extends Component {
   }
   render() {
     return (
-      <div style={homePageContainerStyles}>
+      <div>
         <Header navBarSelection="classes" />
 
         <p style={mainHeaderText}>Elementary</p>
@@ -45,9 +44,10 @@ class Classes extends Component {
 
         <div style={scrollDownContainer}>
           <a
-            onClick={() =>
-              window.scrollTo(0, this.intermediateElement.offsetTop + 140)
-            }
+            onClick={() => {
+              document.getElementById("intermediate").scrollIntoView();
+              document.getElementById("classes").scrollTop += 100;
+            }}
           >
             <img src={scrollDownImage} />
           </a>
@@ -86,9 +86,10 @@ class Classes extends Component {
 
         <div style={scrollDownContainer}>
           <a
-            onClick={() =>
-              window.scrollTo(0, this.advancedElement.offsetTop + 180)
-            }
+            onClick={() => {
+              document.getElementById("advanced").scrollIntoView();
+              document.getElementById("classes").scrollTop += 100;
+            }}
           >
             <img src={scrollDownImage} />
           </a>
@@ -133,15 +134,6 @@ class Classes extends Component {
     );
   }
 }
-
-const homePageContainerStyles = {
-  backgroundImage: "url(" + homePageBackgroundImage + ")",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  position: "relative",
-  height: "100%",
-  backgroundAttachment: "fixed"
-};
 
 const mainHeaderText = {
   textAlign: "center",
