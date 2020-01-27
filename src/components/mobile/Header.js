@@ -7,7 +7,7 @@ import hamburgerIcon from "../../resources/hamburger.png";
 import Modal from "react-bootstrap/Modal";
 
 import homePageBackgroundImage from "../../resources/desktop-background.jpg";
-import homePageBackgroundImage2 from "../../resources/desktop-background-2.jpg";
+import homePageBackgroundImage2 from "../../resources/mobile-background.jpg";
 
 class Header extends Component {
   constructor(props) {
