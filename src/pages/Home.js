@@ -9,14 +9,14 @@ import mobileBackgroundImage from "../resources/mobile-background.jpg";
 const Home = props => {
   const homePageContainerStyles = {
     position: "relative",
-    height: "100%",
+    height: "100vh",
     backgroundImage:
       "url(" +
       (props.device === "desktop"
         ? desktopBackgroundImage
         : mobileBackgroundImage) +
       ")",
-    backgroundSize: "cover",
+    backgroundSize: props.device === "desktop" ? "cover" : "100vw 100vh",
     position: "fixed",
     zIndex: -1,
     overflow: "scroll"
