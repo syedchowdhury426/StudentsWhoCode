@@ -17,9 +17,9 @@ const Home = props => {
         : mobileBackgroundImage) +
       ")",
     backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
-    flex: 1
+    position: "fixed",
+    zIndex: -1,
+    overflow: "scroll"
   };
 
   return (
