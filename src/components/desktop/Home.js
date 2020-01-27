@@ -15,7 +15,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div style={homePageContainerStyles}>
+      <div>
         <Header navBarSelection="home" />
         <p style={title}>STUDENTS WHO CODE</p>
         <p style={introText}>
@@ -116,16 +116,6 @@ class Home extends Component {
     );
   }
 }
-
-const homePageContainerStyles = {
-  position: "relative",
-  height: "100%",
-  backgroundImage: "url(" + homePageBackgroundImage + ")",
-  backgroundSize: "102% 102%",
-  backgroundRepeat: "no-repeat",
-  backgroundAttachment: "fixed",
-  flex: 1
-};
 
 const title = {
   paddingTop: "28vh",
