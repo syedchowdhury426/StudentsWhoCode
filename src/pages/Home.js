@@ -16,7 +16,7 @@ const Home = props => {
         ? desktopBackgroundImage
         : mobileBackgroundImage) +
       ")",
-    backgroundSize: props.device === "desktop" ? "cover" : "100vw 100vh",
+    backgroundSize: props.device === "desktop" ? "cover" : "100vw 95vh",
     position: "fixed",
     zIndex: -1,
     overflow: "scroll"
