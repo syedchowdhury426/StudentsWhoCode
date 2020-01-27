@@ -8,6 +8,8 @@ import facebookIcon from "../../resources/facebook.png";
 import instragramIcon from "../../resources/instagram.png";
 import linkedinIcon from "../../resources/linkedin.png";
 
+import "../../styles/home.css";
+
 class Home extends Component {
   constructor() {
     super();
@@ -15,7 +17,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div style={homePageContainerStyles}>
+      <div className="homePageContainerStyles">
         <Header navBarSelection="home" />
 
         <p style={title}>STUDENTS WHO CODE</p>
