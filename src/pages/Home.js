@@ -23,7 +23,7 @@ const Home = props => {
   };
 
   return (
-    <div style={homePageContainerStyles}>
+    <div id="home" style={homePageContainerStyles}>
       {props.device === "desktop" ? <DesktopHome /> : <MobileHome />}
     </div>
   );

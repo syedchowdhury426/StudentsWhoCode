@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import Header from "../mobile/Header";
 
-import homePageBackgroundImage from "../../resources/mobile-background.jpg";
 import scrollDownImage from "../../resources/scrollDown.png";
 import facebookIcon from "../../resources/facebook.png";
 import instragramIcon from "../../resources/instagram.png";
@@ -27,9 +26,11 @@ class Home extends Component {
 
         <div style={scrollDownContainer}>
           <a
-            onClick={() =>
-              window.scrollTo(0, this.whatAreWeElement.offsetTop - 100)
-            }
+            style={iosCursor}
+            onClick={() => {
+              document.getElementById("whatAreWe").scrollIntoView();
+              document.getElementById("home").scrollTop -= 100;
+            }}
           >
             <img src={scrollDownImage} />
           </a>
@@ -65,9 +66,10 @@ class Home extends Component {
 
         <div style={scrollDownContainer}>
           <a
-            onClick={() =>
-              window.scrollTo(0, this.whoAreWeElement.offsetTop - 100)
-            }
+            onClick={() => {
+              document.getElementById("whoAreWe").scrollIntoView();
+              document.getElementById("home").scrollTop -= 100;
+            }}
           >
             <img src={scrollDownImage} />
           </a>
@@ -116,23 +118,6 @@ class Home extends Component {
   }
 }
 
-const homePageContainerStyles = {
-  content: "",
-  display: "block",
-  position: "fixed",
-  left: 0,
-  top: 0,
-  width: "100%",
-  height: "100",
-  zIndex: -10,
-  background: "url(" + homePageBackgroundImage + ") no-repeat center center",
-  webkitBackgroundSize: "cover",
-  mozBackgroundSize: "cover",
-  oBackgroundSize: "cover",
-  backgroundSize: "cover",
-  backgroundAttachment: "scroll"
-};
-
 const title = {
   paddingTop: "30vh",
   textAlign: "center",
@@ -161,6 +146,10 @@ const introText = {
 const scrollDownContainer = {
   marginTop: "5vh",
   textAlign: "center"
+};
+
+const iosCursor = {
+  cursor: "pointer"
 };
 
 const whatAreWeHeaderStyle = {

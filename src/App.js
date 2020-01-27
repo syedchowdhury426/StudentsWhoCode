@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Button } from "reactstrap";
 
 import Classes from "./pages/Classes";
 import Contact from "./pages/ContactUs";
