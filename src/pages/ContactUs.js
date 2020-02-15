@@ -1,7 +1,7 @@
 import React from "react";
 
 import DesktopContact from "../components/desktop/ContactUs";
-import MobileContact from "../components/mobile/ContactUs";
+import MobileContact from "../components/mobile/ContactUs2";
 
 import desktopBackgroundImage from "../resources/desktop-background-2.jpg";
 import mobileBackgroundImage from "../resources/mobile-background.jpg";
