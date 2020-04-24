@@ -13,6 +13,22 @@
       href="https://fonts.googleapis.com/css?family=Palanquin+Dark:500|Roboto:400&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js"
+      data-dojo-config="usePlainJson: true, isDebug: false"
+    ></script>
+    <script type="text/javascript">
+      window.dojoRequire(["mojo/signup-forms/Loader"], function (L) {
+        L.start({
+          baseUrl: "mc.us19.list-manage.com",
+          uuid: "63f9cb9c7d20ba416b04ece1e",
+          lid: "474eebac36",
+          uniqueMethods: true,
+        });
+      });
+    </script>
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -28,7 +44,7 @@
     -->
     <title>Students Who Code</title>
   </head>
-  <body style="height: 100%; margin: 0; min-height: 100%; width: 100%">
+  <body style="height: 100%; margin: 0; min-height: 100%; width: 100%;">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
