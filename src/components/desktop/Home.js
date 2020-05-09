@@ -25,9 +25,24 @@ class Home extends Component {
 
         <div style={socialMediaContainer}>
           <span>
-            <img style={leftsocialIconStyle} src={linkedinIcon} />
-            <img style={socialIconStyle} src={instragramIcon} />
-            <img style={rightsocialIconStyle} src={facebookIcon} />
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/studentswhocode/"
+            >
+              <img style={leftsocialIconStyle} src={linkedinIcon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://instagram.com/studentswhocode?igshid=1m3db0xphlnl7"
+            >
+              <img style={socialIconStyle} src={instragramIcon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/Students-Who-Code-113402890210105/"
+            >
+              <img style={rightsocialIconStyle} src={facebookIcon} />
+            </a>
           </span>
         </div>
 
@@ -44,7 +59,7 @@ class Home extends Component {
         <div
           id="whatAreWe"
           style={whatAreWesectionStyle}
-          ref={whatAreWeElement => {
+          ref={(whatAreWeElement) => {
             this.whatAreWeElement = whatAreWeElement;
           }}
         >
@@ -81,7 +96,7 @@ class Home extends Component {
         <div
           id="whoAreWe"
           style={whoAreWesectionStyle}
-          ref={whoAreWeElement => {
+          ref={(whoAreWeElement) => {
             this.whoAreWeElement = whoAreWeElement;
           }}
         >
@@ -108,9 +123,24 @@ class Home extends Component {
         <p>.</p>
         <div style={socialMediaFooterContainer}>
           <span>
-            <img style={sideSocialIconStyle} src={linkedinIcon} />
-            <img style={socialIconFooterStyle} src={instragramIcon} />
-            <img style={sideSocialIconStyle} src={facebookIcon} />
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/studentswhocode/"
+            >
+              <img style={sideSocialIconStyle} src={linkedinIcon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://instagram.com/studentswhocode?igshid=1m3db0xphlnl7"
+            >
+              <img style={socialIconFooterStyle} src={instragramIcon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/Students-Who-Code-113402890210105/"
+            >
+              <img style={sideSocialIconStyle} src={facebookIcon} />
+            </a>
           </span>
         </div>
       </div>
@@ -124,7 +154,7 @@ const title = {
   color: "white",
   fontFamily: "Palanquin Dark, sans-serif",
   fontWeight: "normal",
-  fontSize: "3.5vw"
+  fontSize: "3.5vw",
 };
 
 const introText = {
@@ -140,12 +170,12 @@ const introText = {
   paddingBottom: "10px",
   paddingLeft: "5px",
   paddingRight: "5px",
-  fontSize: "1.5vw"
+  fontSize: "1.5vw",
 };
 
 const scrollDownContainer = {
   marginTop: "4vh",
-  textAlign: "center"
+  textAlign: "center",
 };
 
 const whatAreWesectionStyle = {
@@ -153,7 +183,7 @@ const whatAreWesectionStyle = {
   display: "flex",
   flexDirection: "row",
   flex: 1,
-  justifyContent: "space-evenly"
+  justifyContent: "space-evenly",
 };
 
 const whatAreWeHeaderStyle = {
@@ -162,7 +192,7 @@ const whatAreWeHeaderStyle = {
   fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3.5vw",
   width: "60vw",
-  paddingLeft: "10vw"
+  paddingLeft: "10vw",
 };
 
 const whatAreWeBodyStyle = {
@@ -176,7 +206,7 @@ const whatAreWeBodyStyle = {
   paddingTop: "10px",
   paddingBottom: "10px",
   paddingLeft: "10px",
-  paddingRight: "5px"
+  paddingRight: "5px",
 };
 
 const whoAreWesectionStyle = {
@@ -185,7 +215,7 @@ const whoAreWesectionStyle = {
   flexDirection: "row",
   flex: 1,
   justifyContent: "space-evenly",
-  marginBottom: "40vh"
+  marginBottom: "40vh",
 };
 
 const whoAreWeHeaderStyle = {
@@ -194,7 +224,7 @@ const whoAreWeHeaderStyle = {
   fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3.5vw",
   width: "50vw",
-  paddingLeft: "10vw"
+  paddingLeft: "10vw",
 };
 
 const whoAreWeBodyStyle = {
@@ -207,31 +237,31 @@ const whoAreWeBodyStyle = {
   paddingTop: "10px",
   paddingBottom: "10px",
   paddingLeft: "10px",
-  paddingRight: "10px"
+  paddingRight: "10px",
 };
 
 const socialMediaContainer = {
   left: 0,
   bottom: 0,
   width: "100vw",
-  textAlign: "center"
+  textAlign: "center",
 };
 
 const socialIconStyle = {
   width: "5vh",
   marginLeft: "10px",
   marginRight: "10px",
-  marginTop: "2vh"
+  marginTop: "2vh",
 };
 
 const leftsocialIconStyle = {
   width: "5vh",
-  marginTop: "2vh"
+  marginTop: "2vh",
 };
 
 const rightsocialIconStyle = {
   width: "5vh",
-  marginTop: "2vh"
+  marginTop: "2vh",
 };
 
 const socialMediaFooterContainer = {
@@ -239,17 +269,17 @@ const socialMediaFooterContainer = {
   bottom: 0,
   width: "100vw",
   textAlign: "center",
-  backgroundColor: "#5ED1EC"
+  backgroundColor: "#5ED1EC",
 };
 
 const socialIconFooterStyle = {
   width: "5vh",
   marginLeft: "10px",
-  marginRight: "10px"
+  marginRight: "10px",
 };
 
 const sideSocialIconStyle = {
-  width: "5vh"
+  width: "5vh",
 };
 
 export default Home;

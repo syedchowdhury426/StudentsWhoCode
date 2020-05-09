@@ -39,7 +39,7 @@ class Home extends Component {
         <p
           id="whatAreWe"
           style={whatAreWeHeaderStyle}
-          ref={whatAreWeElement => {
+          ref={(whatAreWeElement) => {
             this.whatAreWeElement = whatAreWeElement;
           }}
         >
@@ -78,7 +78,7 @@ class Home extends Component {
         <p
           id="whoAreWe"
           style={whoAreWeHeaderStyle}
-          ref={whoAreWeElement => {
+          ref={(whoAreWeElement) => {
             this.whoAreWeElement = whoAreWeElement;
           }}
         >
@@ -108,9 +108,24 @@ class Home extends Component {
 
         <div style={socialMediaContainer}>
           <span>
-            <img style={leftsocialIconStyle} src={linkedinIcon} />
-            <img style={socialIconStyle} src={instragramIcon} />
-            <img style={rightsocialIconStyle} src={facebookIcon} />
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/studentswhocode/"
+            >
+              <img style={leftsocialIconStyle} src={linkedinIcon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://instagram.com/studentswhocode?igshid=1m3db0xphlnl7"
+            >
+              <img style={socialIconStyle} src={instragramIcon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/Students-Who-Code-113402890210105/"
+            >
+              <img style={rightsocialIconStyle} src={facebookIcon} />
+            </a>
           </span>
         </div>
       </div>
@@ -124,7 +139,7 @@ const title = {
   color: "white",
   fontWeight: "bold",
   fontFamily: "Palanquin Dark, sans-serif",
-  fontSize: "3.5vh"
+  fontSize: "3.5vh",
 };
 
 const introText = {
@@ -140,16 +155,16 @@ const introText = {
   paddingBottom: "10px",
   paddingLeft: "5px",
   paddingRight: "5px",
-  fontSize: "2.2vh"
+  fontSize: "2.2vh",
 };
 
 const scrollDownContainer = {
   marginTop: "5vh",
-  textAlign: "center"
+  textAlign: "center",
 };
 
 const iosCursor = {
-  cursor: "pointer"
+  cursor: "pointer",
 };
 
 const whatAreWeHeaderStyle = {
@@ -158,7 +173,7 @@ const whatAreWeHeaderStyle = {
   fontWeight: "bold",
   fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3vh",
-  textAlign: "center"
+  textAlign: "center",
 };
 
 const whatAreWeBodyStyle = {
@@ -172,7 +187,7 @@ const whatAreWeBodyStyle = {
   paddingTop: "10px",
   paddingBottom: "10px",
   paddingLeft: "10px",
-  paddingRight: "5px"
+  paddingRight: "5px",
 };
 
 const whoAreWeHeaderStyle = {
@@ -181,7 +196,7 @@ const whoAreWeHeaderStyle = {
   fontWeight: "bold",
   fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3vh",
-  textAlign: "center"
+  textAlign: "center",
 };
 
 const whoAreWeBodyStyle = {
@@ -196,7 +211,7 @@ const whoAreWeBodyStyle = {
   paddingBottom: "10px",
   paddingLeft: "10px",
   paddingRight: "10px",
-  marginBottom: "40vh"
+  marginBottom: "40vh",
 };
 
 const socialMediaContainer = {
@@ -206,21 +221,21 @@ const socialMediaContainer = {
   width: "100vw",
   backgroundColor: "#5ED1EC",
   textAlign: "center",
-  height: "5vh"
+  height: "5vh",
 };
 
 const socialIconStyle = {
   width: "5vh",
   marginLeft: "10px",
-  marginRight: "10px"
+  marginRight: "10px",
 };
 
 const leftsocialIconStyle = {
-  width: "5vh"
+  width: "5vh",
 };
 
 const rightsocialIconStyle = {
-  width: "5vh"
+  width: "5vh",
 };
 
 export default Home;
