@@ -162,10 +162,11 @@ const containerStyles = {
 
 const formStyle = {
   display: "flex",
+  flexDirection: "column",
 };
 
 const formGroupStyle = {
-  width: "50%",
+  width: "100%",
 };
 
 const inputStyle = {
@@ -222,7 +223,7 @@ const errorMessageText = {
   color: "black",
   fontWeight: "bold",
   fontFamily: "Palanquin Dark, sans-serif",
-  fontSize: "4vw",
+  fontSize: "5vw",
 };
 
 export default ContactForm;
