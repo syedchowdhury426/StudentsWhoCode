@@ -56,7 +56,7 @@ class Classes extends Component {
         <p
           id="intermediate"
           style={otherHeadersText}
-          ref={intermediateElement => {
+          ref={(intermediateElement) => {
             this.intermediateElement = intermediateElement;
           }}
         >
@@ -98,7 +98,7 @@ class Classes extends Component {
         <p
           id="advanced"
           style={otherHeadersText}
-          ref={advancedElement => {
+          ref={(advancedElement) => {
             this.advancedElement = advancedElement;
           }}
         >
@@ -124,9 +124,24 @@ class Classes extends Component {
 
         <div style={socialMediaContainer}>
           <span>
-            <img style={leftsocialIconStyle} src={linkedinIcon} />
-            <img style={socialIconStyle} src={instragramIcon} />
-            <img style={rightsocialIconStyle} src={facebookIcon} />
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/studentswhocode/"
+            >
+              <img style={leftsocialIconStyle} src={linkedinIcon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://instagram.com/studentswhocode?igshid=1m3db0xphlnl7"
+            >
+              <img style={socialIconStyle} src={instragramIcon} />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/Students-Who-Code-113402890210105/"
+            >
+              <img style={rightsocialIconStyle} src={facebookIcon} />
+            </a>
           </span>
         </div>
       </div>
@@ -140,7 +155,7 @@ const mainHeaderText = {
   fontWeight: "bold",
   fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3.5vw",
-  paddingTop: "20vh"
+  paddingTop: "20vh",
 };
 
 const otherHeadersText = {
@@ -149,23 +164,23 @@ const otherHeadersText = {
   fontWeight: "bold",
   fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3.5vw",
-  paddingTop: "40vh"
+  paddingTop: "40vh",
 };
 
 const iconContainer = {
-  textAlign: "center"
+  textAlign: "center",
 };
 
 const iconStyle = {
   width: "10vw",
   textAlign: "center",
-  paddingTop: "10px"
+  paddingTop: "10px",
 };
 
 const webIconStyle = {
   width: "15vw",
   textAlign: "center",
-  paddingTop: "10px"
+  paddingTop: "10px",
 };
 
 const bodyStyle = {
@@ -181,16 +196,16 @@ const bodyStyle = {
   paddingBottom: "10px",
   paddingLeft: "10px",
   paddingRight: "5px",
-  lineHeight: 2
+  lineHeight: 2,
 };
 
 const scrollDownContainer = {
   marginTop: "5vh",
-  textAlign: "center"
+  textAlign: "center",
 };
 
 const emptyContainer = {
-  marginTop: "30vh"
+  marginTop: "30vh",
 };
 
 const socialMediaContainer = {
@@ -199,21 +214,21 @@ const socialMediaContainer = {
   width: "100vw",
   backgroundColor: "#5ED1EC",
   textAlign: "center",
-  height: "5vh"
+  height: "5vh",
 };
 
 const socialIconStyle = {
   width: "5vh",
   marginLeft: "10px",
-  marginRight: "10px"
+  marginRight: "10px",
 };
 
 const leftsocialIconStyle = {
-  width: "5vh"
+  width: "5vh",
 };
 
 const rightsocialIconStyle = {
-  width: "5vh"
+  width: "5vh",
 };
 
 export default Classes;
