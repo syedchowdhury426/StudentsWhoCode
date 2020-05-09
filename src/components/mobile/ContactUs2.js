@@ -1,89 +1,104 @@
-import React, { Component, Content } from 'react'
-import * as emailjs from 'emailjs-com'
+import React, { Component, Content } from "react";
+import * as emailjs from "emailjs-com";
 import Header from "../mobile/Header";
-import { Button, Container, FormFeedback, Form, FormGroup, Label, Input } from 'reactstrap';
+import {
+  Button,
+  Container,
+  FormFeedback,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+} from "reactstrap";
 
 import facebookIcon from "../../resources/facebook.png";
 import instragramIcon from "../../resources/instagram.png";
 import linkedinIcon from "../../resources/linkedin.png";
 
-
 class ContactForm extends Component {
   state = {
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  }
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    errorMessage: "",
+  };
 
   handleSubmit(e) {
-    e.preventDefault()
-    const { name, email, subject, message } = this.state
-    let templateParams = {
-      from_name: email,
-      to_name: '<YOUR_EMAIL_ID>',
-      subject: subject,
-      message_html: message,
-     }
+    e.preventDefault();
+    const { name, email, subject, message } = this.state;
 
-     emailjs.send(
-      'gmail',
-      'template_intBIcNy',
-       templateParams,
-      'user_CV2SnpnBu4ECpbwOBqmAA'
-     )
+    if (name && email && subject && message) {
+      let templateParams = {
+        from_name: email,
+        to_name: name,
+        subject: subject,
+        message_html: message,
+      };
 
-     this.resetForm()
+      emailjs.send(
+        "gmail",
+        "template_intBIcNy",
+        templateParams,
+        "user_CV2SnpnBu4ECpbwOBqmAA"
+      );
+
+      this.resetForm();
+    } else {
+      this.setState({
+        errorMessage: "All fields must be filled out before submission!",
+      });
+    }
   }
 
   resetForm() {
     this.setState({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    })
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
   }
 
   handleChange = (param, e) => {
-    this.setState({ [param]: e.target.value })
-  }
+    this.setState({ [param]: e.target.value });
+  };
 
   render() {
     return (
       <div style={divStyle}>
         <Header navBarSelection="contact" />
 
-          <p style={mainHeaderText}>Contact Us</p>
-          <Container style={containerStyles}>
+        <p style={mainHeaderText}>Contact Us</p>
+        <p style={errorMessageText}>{this.state.errorMessage}</p>
+        <Container style={containerStyles}>
           <Form onSubmit={this.handleSubmit.bind(this)}>
+            <div style={formStyle}>
+              <FormGroup style={formGroupStyle} controlId="formBasicEmail">
+                {/*}<Label className="text-muted">Email address</Label>*/}
+                <Input
+                  type="email"
+                  name="email"
+                  value={this.state.email}
+                  className="text-primary"
+                  onChange={this.handleChange.bind(this, "email")}
+                  placeholder="Email:"
+                  style={inputStyle}
+                />
+              </FormGroup>
 
-          <div style={formStyle}>
-            <FormGroup style={formGroupStyle} controlId="formBasicEmail">
-              {/*}<Label className="text-muted">Email address</Label>*/}
-              <Input
-                type="email"
-                name="email"
-                value={this.state.email}
-                className="text-primary"
-                onChange={this.handleChange.bind(this, 'email')}
-                placeholder="Email:"
-                style={inputStyle}
-              />
-            </FormGroup>
-
-            <FormGroup style={formGroupStyle} controlId="formBasicName">
-              {/*}<Label className="text-muted">Name</Label>*/}
-              <Input
-                type="text"
-                name="name"
-                value={this.state.name}
-                className="text-primary"
-                onChange={this.handleChange.bind(this, 'name')}
-                placeholder="Name:"
-                style={inputStyle}
-              />
-            </FormGroup>
+              <FormGroup style={formGroupStyle} controlId="formBasicName">
+                {/*}<Label className="text-muted">Name</Label>*/}
+                <Input
+                  type="text"
+                  name="name"
+                  value={this.state.name}
+                  className="text-primary"
+                  onChange={this.handleChange.bind(this, "name")}
+                  placeholder="Name:"
+                  style={inputStyle}
+                />
+              </FormGroup>
             </div>
             <FormGroup controlId="formBasicSubject">
               {/*}<Label className="text-muted">Subject</Label>*/}
@@ -92,7 +107,7 @@ class ContactForm extends Component {
                 name="subject"
                 className="text-primary"
                 value={this.state.subject}
-                onChange={this.handleChange.bind(this, 'subject')}
+                onChange={this.handleChange.bind(this, "subject")}
                 placeholder="Subject:"
                 style={inputStyle}
               />
@@ -105,7 +120,7 @@ class ContactForm extends Component {
                 name="message"
                 className="text-primary"
                 value={this.state.message}
-                onChange={this.handleChange.bind(this, 'message')}
+                onChange={this.handleChange.bind(this, "message")}
                 placeholder="Body:"
                 style={inputStyle}
               />
@@ -114,51 +129,50 @@ class ContactForm extends Component {
             <Button style={buttonStyle} variant="primary" type="submit">
               Send
             </Button>
-
           </Form>
-          </Container>
+        </Container>
 
-          <div style={socialMediaContainer}>
-            <span>
-              <img style={leftsocialIconStyle} src={linkedinIcon} />
-              <img style={socialIconStyle} src={instragramIcon} />
-              <img style={rightsocialIconStyle} src={facebookIcon} />
-            </span>
-          </div>
+        <div style={socialMediaContainer}>
+          <span>
+            <img style={leftsocialIconStyle} src={linkedinIcon} />
+            <img style={socialIconStyle} src={instragramIcon} />
+            <img style={rightsocialIconStyle} src={facebookIcon} />
+          </span>
+        </div>
       </div>
-    )
+    );
   }
 }
 
-const divStyle ={
-  width:"100vw"
-}
+const divStyle = {
+  width: "100vw",
+};
 const containerStyles = {
-    //alignItems: 'center',
-    //justifyContent: 'center',
-    textAlign: "center",
-    borderRadius: "20px",
-    //marginTop: "5%",
-    paddingTop: "5vh",
-    paddingBottom: "2vh",
-    width: "60%",
-    background: "#FFFFFF",
-    boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.25)"
-}
+  //alignItems: 'center',
+  //justifyContent: 'center',
+  textAlign: "center",
+  borderRadius: "20px",
+  //marginTop: "5%",
+  paddingTop: "5vh",
+  paddingBottom: "2vh",
+  width: "60%",
+  background: "#FFFFFF",
+  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.25)",
+};
 
 const formStyle = {
-  display: 'flex',
-}
+  display: "flex",
+};
 
 const formGroupStyle = {
-  width: "50%"
-}
+  width: "50%",
+};
 
 const inputStyle = {
-  backgroundColor: "#EBF3F5"
-}
+  backgroundColor: "#EBF3F5",
+};
 
-const buttonStyle ={
+const buttonStyle = {
   borderRadius: "50%",
   textAlign: "center",
   padding: "0px",
@@ -168,8 +182,8 @@ const buttonStyle ={
   backgroundColor: "white",
   color: "black",
   fontWeight: "bold",
-  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.25)"
-}
+  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.25)",
+};
 
 const socialMediaContainer = {
   bottom: "0px",
@@ -177,21 +191,21 @@ const socialMediaContainer = {
   backgroundColor: "#5ED1EC",
   textAlign: "center",
   height: "5vh",
-  position: "absolute"
+  position: "absolute",
 };
 
 const socialIconStyle = {
   width: "5vh",
   marginLeft: "10px",
-  marginRight: "10px"
+  marginRight: "10px",
 };
 
 const leftsocialIconStyle = {
-  width: "5vh"
+  width: "5vh",
 };
 
 const rightsocialIconStyle = {
-  width: "5vh"
+  width: "5vh",
 };
 
 const mainHeaderText = {
@@ -200,7 +214,15 @@ const mainHeaderText = {
   fontWeight: "bold",
   fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "7vw",
-  paddingTop: "15vh"
+  paddingTop: "15vh",
+};
+
+const errorMessageText = {
+  textAlign: "center",
+  color: "black",
+  fontWeight: "bold",
+  fontFamily: "Palanquin Dark, sans-serif",
+  fontSize: "4vw",
 };
 
 export default ContactForm;
