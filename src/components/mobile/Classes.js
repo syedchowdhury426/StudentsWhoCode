@@ -42,6 +42,14 @@ class Classes extends Component {
           <strong>performance</strong>.
         </p>
 
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/1dylYLl7xZO4_1a8YxxvT80V_v5VMlyLvUKbezYMkroM/viewform?edit_requested=true"
+          style={signUpStyle}
+        >
+          Sign up for Scratch!
+        </a>
+
         <div style={scrollDownContainer}>
           <a
             onClick={() => {
@@ -84,6 +92,14 @@ class Classes extends Component {
           own <strong>web pages</strong>.
         </p>
 
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/1plASdhIdLid8MOVe1jAbqXx0dQnaE7E4FFuz4bxi8Dg/viewform?edit_requested=true"
+          style={signUpStyle}
+        >
+          Sign up for Web Development!
+        </a>
+
         <div style={scrollDownContainer}>
           <a
             onClick={() => {
@@ -120,6 +136,14 @@ class Classes extends Component {
           with the most popular programming language to date,{" "}
           <strong>Java</strong>.{" "}
         </p>
+
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/1nPkDnghuAIual8lBDVBBQzbZtVkO7cIvjoUf5LDJhGQ/viewform?edit_requested=true"
+          style={signUpStyle}
+        >
+          Sign up for Java Development!
+        </a>
 
         <div style={emptyContainer}>.</div>
 
@@ -198,6 +222,15 @@ const bodyStyle = {
   paddingLeft: "10px",
   paddingRight: "5px",
   lineHeight: 2,
+};
+
+const signUpStyle = {
+  display: "block",
+  textAlign: "center",
+  fontSize: "3vh",
+  color: "white",
+  fontFamily: "Palanquin Dark, sans-serif",
+  fontWeight: "bold",
 };
 
 const scrollDownContainer = {
