@@ -24,6 +24,18 @@ class Home extends Component {
           <strong>early age</strong>
         </p>
 
+        <div style={empty}></div>
+
+        <a
+          style={registerLink}
+          target="_blank"
+          href="https://linktr.ee/studentswhocode"
+        >
+          <span>Register for a FREE class today!</span>
+        </a>
+
+        <div style={empty}></div>
+
         <div style={scrollDownContainer}>
           <a
             style={iosCursor}
@@ -134,12 +146,16 @@ class Home extends Component {
 }
 
 const title = {
-  paddingTop: "30vh",
+  paddingTop: "25vh",
   textAlign: "center",
   color: "white",
   fontWeight: "bold",
   fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3.5vh",
+};
+
+const empty = {
+  paddingTop: "2vh",
 };
 
 const introText = {
@@ -155,6 +171,22 @@ const introText = {
   paddingBottom: "10px",
   paddingLeft: "5px",
   paddingRight: "5px",
+  fontSize: "2.2vh",
+};
+
+const registerLink = {
+  textAlign: "center",
+  fontFamily: "Palanquin Dark, sans-serif",
+  borderRadius: "30px",
+  backgroundColor: "#a7e4f2",
+  color: "black",
+  marginTop: "5vh",
+  marginLeft: "19vw",
+  marginRight: "10vw",
+  paddingTop: "10px",
+  paddingBottom: "10px",
+  paddingLeft: "10px",
+  paddingRight: "10px",
   fontSize: "2.2vh",
 };
 
