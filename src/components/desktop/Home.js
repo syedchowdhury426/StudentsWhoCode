@@ -23,6 +23,18 @@ class Home extends Component {
           <strong>early age</strong>
         </p>
 
+        <div style={empty}></div>
+
+        <a
+          style={registerLink}
+          target="_blank"
+          href="https://linktr.ee/studentswhocode"
+        >
+          <span>Register for a FREE class today!</span>
+        </a>
+
+        <div style={empty}></div>
+
         <div style={socialMediaContainer}>
           <span>
             <a
@@ -113,11 +125,6 @@ class Home extends Component {
               Assistant Professor with Rutgers Continuing Education Program at
               TrilogyEd Bootcamp
             </p>
-            <p>
-              <strong>Tasfiqul Mollah</strong>
-              <br />
-              Business Management Student
-            </p>
           </div>
         </div>
         <p>.</p>
@@ -149,12 +156,16 @@ class Home extends Component {
 }
 
 const title = {
-  paddingTop: "28vh",
+  paddingTop: "25vh",
   textAlign: "center",
   color: "white",
   fontFamily: "Palanquin Dark, sans-serif",
   fontWeight: "normal",
   fontSize: "3.5vw",
+};
+
+const empty = {
+  paddingTop: "2vh",
 };
 
 const introText = {
@@ -170,6 +181,22 @@ const introText = {
   paddingBottom: "10px",
   paddingLeft: "5px",
   paddingRight: "5px",
+  fontSize: "1.5vw",
+};
+
+const registerLink = {
+  textAlign: "center",
+  fontFamily: "Palanquin Dark, sans-serif",
+  borderRadius: "30px",
+  backgroundColor: "#a7e4f2",
+  color: "black",
+  marginTop: "5vh",
+  marginLeft: "39vw",
+  marginRight: "30vw",
+  paddingTop: "10px",
+  paddingBottom: "10px",
+  paddingLeft: "15px",
+  paddingRight: "15px",
   fontSize: "1.5vw",
 };
 
