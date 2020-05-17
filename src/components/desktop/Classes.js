@@ -42,11 +42,7 @@ class Classes extends Component {
           <strong>performance</strong>.
         </p>
 
-        <a
-          target="_blank"
-          href="https://docs.google.com/forms/d/1dylYLl7xZO4_1a8YxxvT80V_v5VMlyLvUKbezYMkroM/viewform?edit_requested=true"
-          style={signUpStyle}
-        >
+        <a target="_blank" href="https://bit.ly/2ADYXSB" style={signUpStyle}>
           Sign up for Scratch!
         </a>
 
@@ -92,11 +88,7 @@ class Classes extends Component {
           own <strong>web pages</strong>.
         </p>
 
-        <a
-          target="_blank"
-          href="https://docs.google.com/forms/d/1plASdhIdLid8MOVe1jAbqXx0dQnaE7E4FFuz4bxi8Dg/viewform?edit_requested=true"
-          style={signUpStyle}
-        >
+        <a target="_blank" href="https://bit.ly/2LzE25d" style={signUpStyle}>
           Sign up for Web Development!
         </a>
 
@@ -136,11 +128,7 @@ class Classes extends Component {
           programming language to date, <strong>Java</strong>.{" "}
         </p>
 
-        <a
-          target="_blank"
-          href="https://docs.google.com/forms/d/1nPkDnghuAIual8lBDVBBQzbZtVkO7cIvjoUf5LDJhGQ/viewform?edit_requested=true"
-          style={signUpStyle}
-        >
+        <a target="_blank" href="https://bit.ly/366nmvp" style={signUpStyle}>
           Sign up for Java Development!
         </a>
 
