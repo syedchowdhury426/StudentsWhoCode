@@ -146,7 +146,7 @@ class Home extends Component {
 }
 
 const title = {
-  paddingTop: "25vh",
+  paddingTop: "20vh",
   textAlign: "center",
   color: "white",
   fontWeight: "bold",
