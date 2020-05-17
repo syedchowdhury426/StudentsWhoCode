@@ -181,7 +181,7 @@ const registerLink = {
   backgroundColor: "#a7e4f2",
   color: "black",
   marginTop: "5vh",
-  marginLeft: "19vw",
+  marginLeft: "18vw",
   marginRight: "10vw",
   paddingTop: "10px",
   paddingBottom: "10px",
