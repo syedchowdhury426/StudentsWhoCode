@@ -26,7 +26,7 @@ class Classes extends Component {
         </div>
 
         <p style={bodyStyle}>
-          Our elementary program will be based around <strong>MIT’s</strong>{" "}
+          Our elementary program at Students Who Code will be based around <strong>MIT’s</strong>{" "}
           open-source <strong>Scratch</strong> Software.
           <br />
           MIT developed this program as a simplified entry point into
@@ -42,7 +42,7 @@ class Classes extends Component {
           <strong>performance</strong>.
         </p>
 
-        <a target="_blank" href="https://bit.ly/2ADYXSB" style={signUpStyle}>
+        <a target="_blank" href="https://mailchi.mp/f10666f685d4/school-interest-form" style={signUpStyle}>
           Sign up for Scratch!
         </a>
 
@@ -72,7 +72,7 @@ class Classes extends Component {
         </div>
 
         <p style={bodyStyle}>
-          Our intermediate program starts off with <strong>Scratch</strong> for
+          Our intermediate program at Students Who Code starts off with <strong>Scratch</strong> for
           the early middle school students.
           <br />
           Scratch will be used to introduce students to the fundamentals of{" "}
@@ -88,7 +88,7 @@ class Classes extends Component {
           own <strong>web pages</strong>.
         </p>
 
-        <a target="_blank" href="https://bit.ly/2LzE25d" style={signUpStyle}>
+        <a target="_blank" href="https://mailchi.mp/f10666f685d4/school-interest-form" style={signUpStyle}>
           Sign up for Web Development!
         </a>
 
@@ -118,7 +118,7 @@ class Classes extends Component {
         </div>
 
         <p style={bodyStyle}>
-          Our advanced program will target the older students, 13 and up. There
+          Our advanced program at Students Who Code will target the older students, 13 and up. There
           will be <strong>two</strong> classes in this program.
           <br />
           Students will have the option of learning{" "}
@@ -129,7 +129,7 @@ class Classes extends Component {
           <strong>Java</strong>.{" "}
         </p>
 
-        <a target="_blank" href="https://bit.ly/366nmvp" style={signUpStyle}>
+        <a target="_blank" href="https://mailchi.mp/f10666f685d4/school-interest-form" style={signUpStyle}>
           Sign up for Java Development!
         </a>
 
