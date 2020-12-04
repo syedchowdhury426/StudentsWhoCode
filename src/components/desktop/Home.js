@@ -30,7 +30,7 @@ class Home extends Component {
           target="_blank"
           href="https://linktr.ee/studentswhocode"
         >
-          <span>Register for a FREE class today!</span>
+          <span>Sign Up Today!</span>
         </a>
 
         <div style={empty}></div>
@@ -89,7 +89,7 @@ class Home extends Component {
               program to their youth
             </p>
             <p>
-              StudentsWhoCode is intended for three age demographics:
+              Students Who Code is intended for three age demographics:
               <br /> <strong>elementary</strong>, <strong>middle</strong>, and{" "}
               <strong>high</strong> school
             </p>
@@ -117,13 +117,12 @@ class Home extends Component {
             <p>
               <strong>Syed Chowdhury</strong>
               <br />
-              Software Engineer and Product Manager at JPMorgan Chase
+              Software Engineer at JPMorgan Chase
             </p>
             <p>
               <strong>Idrees Ally</strong>
               <br />
-              Assistant Professor with Rutgers Continuing Education Program at
-              TrilogyEd Bootcamp
+              Software Engineer at Travelers
             </p>
           </div>
         </div>
@@ -191,8 +190,7 @@ const registerLink = {
   backgroundColor: "#a7e4f2",
   color: "black",
   marginTop: "5vh",
-  marginLeft: "38vw",
-  marginRight: "30vw",
+  marginLeft: "44vw",
   paddingTop: "10px",
   paddingBottom: "10px",
   paddingLeft: "15px",
@@ -250,7 +248,7 @@ const whoAreWeHeaderStyle = {
   fontWeight: "bold",
   fontFamily: "Palanquin Dark, sans-serif",
   fontSize: "3.5vw",
-  width: "50vw",
+  width: "35vw",
   paddingLeft: "10vw",
 };
 
@@ -260,7 +258,7 @@ const whoAreWeBodyStyle = {
   backgroundColor: "#5ED1EC",
   color: "#033665",
   fontSize: "1.3vw",
-  marginRight: "5vw",
+  marginRight: "10vw",
   paddingTop: "10px",
   paddingBottom: "10px",
   paddingLeft: "10px",

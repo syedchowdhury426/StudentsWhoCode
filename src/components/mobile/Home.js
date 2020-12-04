@@ -31,7 +31,7 @@ class Home extends Component {
           target="_blank"
           href="https://linktr.ee/studentswhocode"
         >
-          <span>Register for a FREE class today!</span>
+          <span>Sign Up Today!</span>
         </a>
 
         <div style={empty}></div>
@@ -70,7 +70,7 @@ class Home extends Component {
             program to their youth
           </p>
           <p>
-            StudentsWhoCode is intended for three age demographics:
+            Students Who Code is intended for three age demographics:
             <br /> <strong>elementary</strong>, <strong>middle</strong>, and{" "}
             <strong>high</strong> school
           </p>
@@ -101,18 +101,12 @@ class Home extends Component {
           <p>
             <strong>Syed Chowdhury</strong>
             <br />
-            Software Engineer and Product Manager at JPMorgan Chase
+            Software Engineer at JPMorgan Chase
           </p>
           <p>
             <strong>Idrees Ally</strong>
             <br />
-            Assistant Professor with Rutgers Continuing Education Program at
-            TrilogyEd Bootcamp
-          </p>
-          <p>
-            <strong>Tasfiqul Mollah</strong>
-            <br />
-            Business Management Student
+            Software Engineer at Travelers
           </p>
         </div>
 
@@ -181,8 +175,7 @@ const registerLink = {
   backgroundColor: "#a7e4f2",
   color: "black",
   marginTop: "5vh",
-  marginLeft: "18vw",
-  marginRight: "10vw",
+  marginLeft: "32vw",
   paddingTop: "10px",
   paddingBottom: "10px",
   paddingLeft: "10px",
